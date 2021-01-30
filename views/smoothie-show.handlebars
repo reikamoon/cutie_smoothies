@@ -9,13 +9,13 @@
 <h1>{{smoothie.name}}</h1>
 <p><i class="fas fa-star" style="color: yellow;" ></i>{{smoothie.rating}}</p>
 {{#if smoothie.link}}
-<p><a href="{{smoothie.link}}">Link to Recipe</a></p>
+<p><a href="{{smoothie.link}}"><i class="fas fa-link" style="color:yellow;"></i>Link to Recipe</a></p>
 
 {{else}}
 
 {{/if}}
-<p>Preptime: {{smoothie.preptime}}</p>
-<p>Servings: {{smoothie.servings}}</p>
+<p><i class="fas fa-clock" style="color:yellow;"></i>Preptime: {{smoothie.preptime}}</p>
+<p><i class="fas fa-blender" style="color:yellow;"></i>Servings: {{smoothie.servings}}</p>
 <p>{{smoothie.desc}}</p>
 <p>You'll need:</p>
 <ol>
