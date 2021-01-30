@@ -28,13 +28,13 @@ Users can:
 
 ## Recipe for Cutie Smoothies
 Built with:
-* Node.js :green_apple:
+* Node.js :green_apple:<br>
 I chose node.js because it is what I am comfortable with, and has a lot of tools to work with. I also enjoy the event-based model that node.js uses. Node.js is helpful for event-based, real-time applications, like chat apps.
-* Express :tangerine:
+* Express :tangerine:<br>
 I chose express because it is what I am comfortable with, and it is easy to configure and customize, and allows various middleware such as method override, which I used for the delete and edit routes.
-* Handlebars :melon:
+* Handlebars :melon:<br>
 Handlebars is the template engine I used for this project. I chose handlebars because of its easy syntax and how similar it is to HTML & Jinja.
-* Postgres/Sequelize :honey_pot:
+* Postgres/Sequelize :honey_pot:<br>
 I chose Postgres/Sequelize because heroku discontinued support for MongoDB last year, and I am fairly comfortable with postgres, as it is easy to edit models and attributes and migrate the db to heroku.
 
 ## Future Features
