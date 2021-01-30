@@ -2,11 +2,11 @@
 by reikamoon :ribbon:
 
 ## Table of Contents
-* [About Cutie Smoothies](about)
-* [Heroku Link](heroku-link)
-* [Key Features](Key-Features)
-* [Recipe for Cutie Smoothies](Recipe-for-Cutie-Smoothies)
-* [Installation](installation)
+* [About Cutie Smoothies](#about)
+* [Heroku Link](#heroku-link)
+* [Key Features](#Key-Features)
+* [Recipe for Cutie Smoothies](#Recipe-for-Cutie-Smoothies)
+* [Installation](#installation)
 
 ## About
 Cutie:strawberry:Smoothies is a website for creating, browsing, and sharing smoothie recipes.
@@ -24,10 +24,10 @@ Users can:
 
 ## Recipe for Cutie Smoothies
 Built with:
-* Node.js
-* Express
-* Handlebars
-* Postgres/Sequelize
+* Node.js :green_apple:
+* Express :tangerine:
+* Handlebars :melon:
+* Postgres/Sequelize :honey_pot:
 
 ## Installation
 1. Clone the repo <br>
