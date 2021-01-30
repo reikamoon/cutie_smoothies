@@ -1,0 +1,79 @@
+<!-- smoothie-index -->
+<div class="row mt-4">
+    <div class="col-lg-6 offset-lg-3">
+
+<center><h1>Cutie Smoothies</h1>
+  <a href="/smoothies/new" class="btn btn-primary">New Smoothie Recipe</a><br><br>
+
+<form action="/search" method="get" id="myForm">
+<input type="text" class="search" id="term" name="term" placeholder="Search...">
+<button type="submit" value="submit" name="search" id="search" disabled="disabled">Submit</button>
+<input type="reset" value="Clear">
+</form>
+</center>
+<br><br>
+{{#each smoothies}}
+<div class="card text-white bg-secondary mb-3">
+  <div class="card-body">
+  <h2 class="card-title">{{this.name}}</h2>  <p>{{this.rating}}</p>
+  {{#if this.link}}
+  <p><a href="{{this.link}}">Link to Recipe</a></p>
+
+  {{else}}
+
+  {{/if}}
+  <p class="card-text">{{this.desc}}</p>
+  <p class="card-text">Preptime: {{this.preptime}}</p>
+  <p class="card-text">Servings: {{this.servings}}</p>
+  <p class="card-text">You'll need:</p>
+  <ol>
+    <li>{{this.ingredient1}}</li>
+    <li>{{this.ingredient2}}</li>
+    <li>{{this.ingredient3}}</li>
+    {{#if this.ingredient4}}
+      <li>{{this.ingredient4}}</li>
+    {{else}}
+
+    {{/if}}
+    {{#if this.ingredient5}}
+      <li>{{this.ingredient5}}</li>
+    {{else}}
+
+    {{/if}}
+  </ol>
+{{#if instructions}}
+<p class="card-text">Instructions: {{this.instructions}}</p>
+{{else}}
+
+{{/if}}
+  <h2>Tags</h2>
+  <p>#{{this.tag1}}</p><p>#{{this.tag2}}</p><p>#{{this.tag3}}</p>
+  <div class="text-right">
+    <a href="/smoothies/{{this.id}}" class="btn btn-primary">Read More...</a>
+  </div>
+</div>
+</div>
+{{/each}}
+<script>
+var inputs = $("form#myForm input, form#myForm textarea");
+
+var validateInputs = function validateInputs(inputs) {
+  var validForm = true;
+  inputs.each(function(index) {
+    var input = $(this);
+    if (!input.val() || (input.type === "radio" && !input.is(':checked'))) {
+      $("#search").attr("disabled", "disabled");
+      validForm = false;
+    }
+  });
+  return validForm;
+}
+
+
+inputs.change(function() {
+  if (validateInputs(inputs)) {
+    $("#search").removeAttr("disabled");
+  }
+});
+
+</script>

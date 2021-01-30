@@ -14,9 +14,21 @@ const hbs = exphbs.create({
 app.engine('handlebars', hbs.engine); 
 app.set('view engine', 'handlebars');
 
-// Render the "home" layout for the main page and send the following msg
+// MOCK ARRAY OF SMOOTHIES
+var smoothies = [
+
+  { name: "Strawberry Banana Smoothie", rating: "4.8", link: "https://www.gimmesomeoven.com/strawberry-banana-smoothie-recipe/#tasty-recipes-65184", preptime: "5 minutes", servings: "2", desc: "The classic strawberry banana smoothie recipe is hard to beat. It’s sweet, it’s fresh, it’s good for you, and it’s always tasty.", ingredient1: "2 cups of frozen strawberries", ingredient2: "1 fresh banana, peeled" , ingredient3: "1 Cup of Milk", ingredient4: "1 Cup of Ice", ingredient5: "", instructions: "", tag1: "Strawberry", tag2: "Banana", tag3: "Dairy"},
+
+  { name: "Mango Smoothie", rating: "4.9", link: "", preptime: "3 minutes", servings: "2", desc: "A cold, creamy mango smoothie is the best summertime smoothie recipe. And it only takes three minutes to whip up!", ingredient1: "2 fresh mangoes", ingredient2: "1 banana" , ingredient3: "1/2 cup of milk", ingredient4: "1/2 cup of yogurt", ingredient5: "", instructions: "Blend ingredients", tag1: "Mango", tag2: "Banana", tag3: "Dairy"},
+]
+
+
+
+
+
+// INDEX
 app.get('/', (req, res) => {
-  res.render('home', { msg: 'Handlebars are Cool!' });
+  res.render('smoothies-index', { smoothies: smoothies });
 })
 
 // Choose a port to listen on
