@@ -30,9 +30,9 @@ Built with:
 * Postgres/Sequelize
 
 ## Installation
-1. Clone the repo
+1. Clone the repo <br>
 `git clone https://github.com/reikamoon/cutie_smoothies.git`
-2. In the repo folder, install necessary ingredients (NPM packages)
+2. In the repo folder, install necessary ingredients (NPM packages) <br>
 `npm i`
-3. Run nodemon
+3. Run nodemon <br>
 `nodemon app.js`
