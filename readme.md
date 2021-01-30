@@ -1,11 +1,14 @@
 # Cutie Smoothies :strawberry:
 by reikamoon :ribbon:
 
+Time: 4-7 Hours
+
 ## Table of Contents
 * [About Cutie Smoothies](#about)
 * [Heroku Link](#heroku-link)
 * [Key Features](#Key-Features)
 * [Recipe for Cutie Smoothies](#Recipe-for-Cutie-Smoothies)
+* [Future Features](#Future-Features)
 * [Installation](#installation)
 
 ## About
@@ -33,6 +36,10 @@ I chose express because it is what I am comfortable with, and it is easy to conf
 Handlebars is the template engine I used for this project. I chose handlebars because of its easy syntax and how similar it is to HTML & Jinja.
 * Postgres/Sequelize :honey_pot:
 I chose Postgres/Sequelize because heroku discontinued support for MongoDB last year, and I am fairly comfortable with postgres, as it is easy to edit models and attributes and migrate the db to heroku.
+
+## Future Features
+* Implement Search + filters (ex: search by tags, search by rating)
+* Add images to recipes (adding the imgURL to the Smoothie model's attributes)
 
 ## Installation
 1. Clone the repo <br>
