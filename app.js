@@ -45,7 +45,11 @@ app.get('/smoothies/new', (req, res) => {
 
 // CREATE
 app.post('/smoothies', (req, res) => {
-  console.log(req.body);
+  models.Smoothie.create(req.body).then(smoothie => {
+    res.redirect(`/`);
+  }).catch((err) => {
+    console.log(err)
+  });
 })
 
 // Choose a port to listen on
