@@ -12,7 +12,7 @@ by reikamoon :ribbon:
 Cutie:strawberry:Smoothies is a website for creating, browsing, and sharing smoothie recipes.
 
 ## Heroku Link
-* [Live Heroku Link WIP]()
+* [Live Heroku Link](https://cutie-smoothies.herokuapp.com/)
 
 ## Features
 Users can:
@@ -21,6 +21,7 @@ Users can:
 * Edit Smoothie Recipes :peach:
 * Delete Smoothie Recipes :watermelon:
 * Share Smoothie Recipes :cherries:
+
 
 ## Recipe for Cutie Smoothies
 Built with:
