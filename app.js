@@ -31,9 +31,11 @@ var smoothies = [
 ]
 
 
-// INDEX
+// INDEXS
 app.get('/', (req, res) => {
-  res.render('smoothies-index', { smoothies: smoothies });
+  models.Smoothie.findAll({ order: [['createdAt', 'DESC']] }).then(smoothies => {
+    res.render('smoothies-index', { smoothies: smoothies });
+  })
 })
 
 // NEW
