@@ -25,6 +25,9 @@ const models = require('./db/models');
 // The following line must appear AFTER const app = express() and before routes!
 app.use(bodyParser.urlencoded({ extended: true }));
 
+//CONTROLLERS
+require('./controllers/smoothies')(app, models);
+
 
 // MOCK ARRAY OF SMOOTHIES
 var smoothies = [
@@ -34,63 +37,6 @@ var smoothies = [
   { name: "Mango Smoothie", rating: "4.9", link: "", preptime: "3 minutes", servings: "2", desc: "A cold, creamy mango smoothie is the best summertime smoothie recipe. And it only takes three minutes to whip up!", ingredient1: "2 fresh mangoes", ingredient2: "1 banana" , ingredient3: "1/2 cup of milk", ingredient4: "1/2 cup of yogurt", ingredient5: "", instructions: "Blend ingredients", tag1: "Mango", tag2: "Banana", tag3: "Dairy"},
 ]
 
-
-// INDEXS
-app.get('/', (req, res) => {
-  models.Smoothie.findAll({ order: [['createdAt', 'DESC']] }).then(smoothies => {
-    res.render('smoothies-index', { smoothies: smoothies });
-  })
-})
-
-// NEW
-app.get('/smoothies/new', (req, res) => {
-  res.render('smoothies-new', {});
-})
-
-// CREATE
-app.post('/smoothies', (req, res) => {
-  models.Smoothie.create(req.body).then(smoothie => {
-    // Redirect to events/:id
-    res.redirect(`/smoothies/${smoothie.id}`)
-
-  }).catch((err) => {
-    console.log(err)
-  });
-})
-
-// SHOW
-app.get('/smoothies/:id', (req, res) => {
-  // Search for the event by its id that was passed in via req.params
-  models.Smoothie.findByPk(req.params.id).then((smoothie) => {
-    // If the id is for a valid event, show it
-    res.render('smoothie-show', { smoothie: smoothie })
-  }).catch((err) => {
-    // if they id was for an event not in our db, log an error
-    console.log(err.message);
-  })
-})
-
-// EDIT
-app.get('/smoothies/:id/edit', (req, res) => {
-  models.Smoothie.findByPk(req.params.id).then((smoothie) => {
-    res.render('smoothies-edit', { smoothie: smoothie });
-  }).catch((err) => {
-    console.log(err.message);
-  })
-});
-
-// UPDATE
-app.put('/smoothies/:id', (req, res) => {
-  models.Smoothie.findByPk(req.params.id).then(smoothie => {
-    smoothie.update(req.body).then(smoothie => {
-      res.redirect(`/smoothies/${req.params.id}`);
-    }).catch((err) => {
-      console.log(err);
-    });
-  }).catch((err) => {
-    console.log(err);
-  });
-});
 
 // Choose a port to listen on
 const port = process.env.PORT || 3000;
