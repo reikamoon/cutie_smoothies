@@ -14,6 +14,12 @@ const hbs = exphbs.create({
 app.engine('handlebars', hbs.engine); 
 app.set('view engine', 'handlebars');
 
+// INITIALIZE BODY-PARSER AND ADD IT TO APP
+const bodyParser = require('body-parser');
+// The following line must appear AFTER const app = express() and before routes!
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
 // MOCK ARRAY OF SMOOTHIES
 var smoothies = [
 
@@ -23,12 +29,19 @@ var smoothies = [
 ]
 
 
-
-
-
 // INDEX
 app.get('/', (req, res) => {
   res.render('smoothies-index', { smoothies: smoothies });
+})
+
+// NEW
+app.get('/smoothies/new', (req, res) => {
+  res.render('smoothies-new', {});
+})
+
+// CREATE
+app.post('/smoothies', (req, res) => {
+  console.log(req.body);
 })
 
 // Choose a port to listen on
