@@ -46,10 +46,24 @@ app.get('/smoothies/new', (req, res) => {
 // CREATE
 app.post('/smoothies', (req, res) => {
   models.Smoothie.create(req.body).then(smoothie => {
-    res.redirect(`/`);
+    // Redirect to events/:id
+    res.redirect(`/smoothies/${smoothie.id}`)
+
   }).catch((err) => {
     console.log(err)
   });
+})
+
+// SHOW
+app.get('/smoothies/:id', (req, res) => {
+  // Search for the event by its id that was passed in via req.params
+  models.Smoothie.findByPk(req.params.id).then((smoothie) => {
+    // If the id is for a valid event, show it
+    res.render('smoothie-show', { smoothie: smoothie })
+  }).catch((err) => {
+    // if they id was for an event not in our db, log an error
+    console.log(err.message);
+  })
 })
 
 // Choose a port to listen on

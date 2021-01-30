@@ -1,0 +1,37 @@
+<!-- views/smoothie-show.handlebars -->
+<div class="row mt-4">
+  <div class="col-lg-6 offset-lg-3">
+<h1>{{smoothie.name}}</h1>
+<p><i class="fas fa-star" style="color: yellow;" ></i>{{smoothie.rating}}</p>
+{{#if smoothie.link}}
+<p><a href="{{smoothie.link}}">Link to Recipe</a></p>
+
+{{else}}
+
+{{/if}}
+<p>Preptime: {{smoothie.preptime}}</p>
+<p>Servings: {{smoothie.servings}}</p>
+<p>{{smoothie.desc}}</p>
+<p>You'll need:</p>
+<ol>
+  <li>{{smoothie.ingredient1}}</li>
+  <li>{{smoothie.ingredient2}}</li>
+  <li>{{smoothie.ingredient3}}</li>
+  {{#if smoothie.ingredient4}}
+    <li>{{smoothie.ingredient4}}</li>
+  {{else}}
+
+  {{/if}}
+  {{#if smoothie.ingredient5}}
+    <li>{{smoothie.ingredient5}}</li>
+  {{else}}
+
+  {{/if}}
+</ol>
+{{#if smoothie.instructions}}
+<p class="card-text">Instructions: {{smoothie.instructions}}</p>
+{{else}}
+
+{{/if}}
+</div>
+</div>
