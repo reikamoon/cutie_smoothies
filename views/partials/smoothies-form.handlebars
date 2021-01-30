@@ -2,28 +2,28 @@
 
 <div class="form-group">
   <label for="name">Name (Required)</label>
-  <input type="text" required id="name" class="form-control" placeholder="(ex: My Smoothie Recipe)" value="{{smoothie.name}}" />
+  <input name="name" required id="name" class="form-control" placeholder="(ex: My Smoothie Recipe)" value="{{smoothie.name}}" />
 </div>
 
 <div class="form-group">
   <label for="rating">Rating (Required) (1-5 Stars)</label>
-  <input type="number" required class="form-control" id="rating" min="1" max="5" value="{{smoothie.rating}}" />
+  <input type="number" name="rating" required class="form-control" id="rating" min="1" max="5" value="{{smoothie.rating}}" />
 </div>
 
 <div class="form-group">
   <label for="link">Link to Recipe (optional)</label>
-  <input type="url" id="url" class="form-control" placeholder="" value="{{smoothie.link}}" />
+  <input type="url" name="link" id="url" class="form-control" placeholder="" value="{{smoothie.link}}" />
 </div>
 
 
 <div class="form-group">
   <label for="preptime">Preptime</label>
-  <input type="text" id="preptime" class="form-control" placeholder="(ex: 5 minutes)" value="{{smoothie.preptime}}" />
+  <input type="text" name="preptime" id="preptime" class="form-control" placeholder="(ex: 5 minutes)" value="{{smoothie.preptime}}" />
 </div>
 
 <div class="form-group">
   <label for="servings">Servings</label>
-  <input type="text" id="servings" class="form-control" placeholder="(ex: 2 servings)" value="{{smoothie.servings}}" />
+  <input type="text" name="servings" id="servings" class="form-control" placeholder="(ex: 2 servings)" value="{{smoothie.servings}}" />
 </div>
 
 <div class="form-group">
@@ -33,27 +33,27 @@
 
 <div class="form-group">
   <label for="ingredient1">1st Ingredient (Required, please include measurements.)</label>
-  <input type="text" required id="ingredient1" class="form-control" placeholder="" value="{{smoothie.ingredient1}}" />
+  <input type="text" name="ingredient1" required id="ingredient1" class="form-control" placeholder="" value="{{smoothie.ingredient1}}" />
 </div>
 
 <div class="form-group">
   <label for="ingredient2">2nd Ingredient (Required, please include measurements.)</label>
-  <input type="text" required id="ingredient2" class="form-control" placeholder="" value="{{smoothie.ingredient2}}" />
+  <input type="text" name="ingredient2" required id="ingredient2" class="form-control" placeholder="" value="{{smoothie.ingredient2}}" />
 </div>
 
 <div class="form-group">
   <label for="ingredient3">3rd Ingredient (Required, please include measurements.)</label>
-  <input type="text" required id="ingredient3" class="form-control" placeholder="" value="{{smoothie.ingredient3}}" />
+  <input type="text" name="ingredient3" required id="ingredient3" class="form-control" placeholder="" value="{{smoothie.ingredient3}}" />
 </div>
 
 <div class="form-group">
   <label for="ingredient4">4th Ingredient (optional, please include measurements.)</label>
-  <input type="text" id="ingredient4" class="form-control" placeholder="" value="{{smoothie.ingredient4}}" />
+  <input type="text" name="ingredient4" id="ingredient4" class="form-control" placeholder="" value="{{smoothie.ingredient4}}" />
 </div>
 
 <div class="form-group">
   <label for="ingredient5">5th Ingredient (optional, please include measurements.)</label>
-  <input type="text" id="ingredient5" class="form-control" placeholder="" value="{{smoothie.ingredient5}}" />
+  <input type="text" name="ingredient5" id="ingredient5" class="form-control" placeholder="" value="{{smoothie.ingredient5}}" />
 </div>
 
 <div class="form-group">
@@ -63,15 +63,15 @@
 
 <div class="form-group">
   <label for="tag1">Tag 1 (optional)</label>
-  <input type="text" id="tag1" class="form-control" placeholder="(ex: Strawberry)" value="{{smoothie.tag1}}" />
+  <input type="text" name="tag1" id="tag1" class="form-control" placeholder="(ex: Strawberry)" value="{{smoothie.tag1}}" />
 </div>
 
 <div class="form-group">
   <label for="tag2">Tag 2 (optional)</label>
-  <input type="text" id="tag2" class="form-control" placeholder="(ex: Dairy)" value="{{smoothie.tag2}}" />
+  <input type="text" name="tag2" id="tag2" class="form-control" placeholder="(ex: Dairy)" value="{{smoothie.tag2}}" />
 </div>
 
 <div class="form-group">
   <label for="tag3">Tag 3 (optional)</label>
-  <input type="text" id="tag3" class="form-control" placeholder="(ex: Vegan)" value="{{smoothie.tag3}}" />
+  <input type="text" name="tag3" id="tag3" class="form-control" placeholder="(ex: Vegan)" value="{{smoothie.tag3}}" />
 </div>
