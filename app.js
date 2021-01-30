@@ -1,6 +1,7 @@
 // Initialize express
 const express = require('express')
 const app = express()
+const methodOverride = require('method-override')
 
 //handlebars
 const handlebars = require('handlebars');
@@ -13,6 +14,9 @@ const hbs = exphbs.create({
 
 app.engine('handlebars', hbs.engine); 
 app.set('view engine', 'handlebars');
+
+// override with POST having ?_method=DELETE or ?_method=PUT
+app.use(methodOverride('_method'))
 
 // INITIALIZE BODY-PARSER AND ADD IT TO APP
 const bodyParser = require('body-parser');
@@ -65,6 +69,28 @@ app.get('/smoothies/:id', (req, res) => {
     console.log(err.message);
   })
 })
+
+// EDIT
+app.get('/smoothies/:id/edit', (req, res) => {
+  models.Smoothie.findByPk(req.params.id).then((smoothie) => {
+    res.render('smoothies-edit', { smoothie: smoothie });
+  }).catch((err) => {
+    console.log(err.message);
+  })
+});
+
+// UPDATE
+app.put('/smoothies/:id', (req, res) => {
+  models.Smoothie.findByPk(req.params.id).then(smoothie => {
+    smoothie.update(req.body).then(smoothie => {
+      res.redirect(`/smoothies/${req.params.id}`);
+    }).catch((err) => {
+      console.log(err);
+    });
+  }).catch((err) => {
+    console.log(err);
+  });
+});
 
 // Choose a port to listen on
 const port = process.env.PORT || 3000;
