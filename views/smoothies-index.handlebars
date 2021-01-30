@@ -10,14 +10,14 @@
   <div class="card-body">
   <h2 class="card-title">{{this.name}}</h2>  <p><i class="fas fa-star" style="color: yellow;" ></i>{{this.rating}}</p>
   {{#if this.link}}
-  <p><a href="{{this.link}}">Link to Recipe</a></p>
+  <p><a href="{{this.link}}"><i class="fas fa-link" style="color:yellow;"></i>Link to Recipe</a></p>
 
   {{else}}
 
   {{/if}}
   <p class="card-text">{{this.desc}}</p>
-  <p class="card-text">Preptime: {{this.preptime}}</p>
-  <p class="card-text">Servings: {{this.servings}}</p>
+  <p class="card-text"><i class="fas fa-clock" style="color:yellow;"></i>Preptime:{{this.preptime}}</p>
+  <p class="card-text"><i class="fas fa-blender" style="color:yellow;"></i>Servings: {{this.servings}}</p>
   <p class="card-text">You'll need:</p>
   <ol>
     <li>{{this.ingredient1}}</li>
