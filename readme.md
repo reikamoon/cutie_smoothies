@@ -2,11 +2,11 @@
 by reikamoon :ribbon:
 
 ## Table of Contents
-* [About Cutie Smoothies](##-about)
-* [Heroku Link](##-link)
-* [Key Features](##-Key-Features)
-* [Recipe for Cutie Smoothies](##-Recipe-for-Cutie-Smoothies)
-* [Installation](##-installation)
+* [About Cutie Smoothies](##about)
+* [Heroku Link](##heroku-link)
+* [Key Features](##Key-Features)
+* [Recipe for Cutie Smoothies](##Recipe-for-Cutie-Smoothies)
+* [Installation](##installation)
 
 ## About
 Cutie:strawberry:Smoothies is a website for creating, browsing, and sharing smoothie recipes.
