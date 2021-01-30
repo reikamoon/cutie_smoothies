@@ -16,6 +16,8 @@ app.set('view engine', 'handlebars');
 
 // INITIALIZE BODY-PARSER AND ADD IT TO APP
 const bodyParser = require('body-parser');
+const models = require('./db/models');
+
 // The following line must appear AFTER const app = express() and before routes!
 app.use(bodyParser.urlencoded({ extended: true }));
 
