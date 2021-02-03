@@ -10,11 +10,13 @@ module.exports = function (app, models) {
   })
 
   // NEW
+  // New Smoothie Recipe Page
   app.get('/smoothies/new', (req, res) => {
     res.render('smoothies-new', {});
   })
 
   // CREATE
+  //Create a New Recipe and add to DB, then redirect to the smoothie recipe page.
   app.post('/smoothies', (req, res) => {
     models.Smoothie.create(req.body).then(smoothie => {
       // Redirect to smoothies/:id
