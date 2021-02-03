@@ -17,7 +17,7 @@ module.exports = function (app, models) {
   // CREATE
   app.post('/smoothies', (req, res) => {
     models.Smoothie.create(req.body).then(smoothie => {
-      // Redirect to events/:id
+      // Redirect to smoothies/:id
       res.redirect(`/smoothies/${smoothie.id}`)
 
     }).catch((err) => {
@@ -27,7 +27,7 @@ module.exports = function (app, models) {
 
   // SHOW
   app.get('/smoothies/:id', (req, res) => {
-    // Search for the event by its id that was passed in via req.params
+    // Search for the smoothie recipe by its id that was passed in via req.params
     models.Smoothie.findByPk(req.params.id).then((smoothie) => {
       // If the id is for a valid event, show it
       res.render('smoothie-show', { smoothie: smoothie })
